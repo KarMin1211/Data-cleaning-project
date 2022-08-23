@@ -1,5 +1,0 @@
-UPDATE "Nashville" AS a
-SET PropertyAddress = b.PropertyAddress
-FROM "Nashville" b
-WHERE b.ParcelID = a.ParcelID AND a.PropertyAddress IS NULL AND b.PropertyAddress IS NOT NULL
-AND a.UniqueID <> b.UniqueID
