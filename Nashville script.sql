@@ -30,10 +30,10 @@ DROP COLUMN PropertyAddress
 --Standardized 'Yes' and 'No' in SoldAsVacant
 UPDATE "Nashville" as a
 SET SoldAsVacant=CASE b.SoldAsVacant
-					         WHEN 'Y' THEN 'Yes'
-					         WHEN 'N' THEN 'No'
-				         ELSE b.SoldAsVacant END
-                 FROM "Nashville" b
+			WHEN 'Y' THEN 'Yes'
+			WHEN 'N' THEN 'No'
+		ELSE b.SoldAsVacant END
+FROM "Nashville" b
 WHERE a.UniqueID=b.UniqueID
 
 --delete duplicates
